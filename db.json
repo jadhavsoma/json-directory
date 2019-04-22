@@ -1,0 +1,8 @@
+{
+	"profiles":[
+	{"id":1, "name":"John","age":21},
+	{"id":2, "name":"Richard","age":40},
+	{"id":3, "name":"som","age":30},
+	{"id":4, "name":"Seema","age":24}
+	]
+}
