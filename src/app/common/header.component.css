@@ -1,0 +1,120 @@
+@font-face {
+   font-family: 'Calibri';
+   src: url('../../assets/fonts/Calibri.eot');
+   src: url('../../assets/fonts/Calibri.eot?#iefix') format('embedded-opentype'),
+   url('../../assets/fonts/Calibri.woff') format('woff'),
+   url('../../assets/fonts/Calibri.ttf')  format('truetype'),
+   url('../../assets/fonts/Calibri.svg#CustomFont') format('svg');
+}
+
+.copyright{margin:0px;padding:0px; font-family:'Calibri', Arial, sans-serif; font-size:14px;border-top: solid 10px #c1ec8f;}
+img{border:none;}
+a, a:link, a:visited{color:#0d5aa9; text-decoration:none;outline:none;}
+a:hover{text-decoration:underline;}
+.bar-bg {
+	background: #e0fad5;
+	border-bottom: 1px solid #b9e48b;
+	border-top: 1px solid #b9e48b;
+	color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+	line-height:30px;
+    vertical-align: middle;
+    padding-left:5px;
+}
+
+
+/* login box top style */
+.wrapper-userprofile {
+    /* Size & position */
+    position: relative;
+    width: 150px;
+    margin: 0;
+    padding: 12px 4px;
+	font-size:14px;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.wrapper-userprofile:after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #ccc transparent;
+}
+.wrapper-userprofile .profile_menu_drodown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* Styles */
+    background: #3f6690;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    border-bottom: none;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Hiding */
+    max-height: 0;
+    width:100%;
+    display:none;
+}
+.wrapper-userprofile .profile_menu_drodown {
+	margin:0px;
+	padding:0px;
+}
+.wrapper-userprofile .profile_menu_drodown li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0px 10px 34px;
+    transition: all 0.3s ease-out;
+}
+.wrapper-userprofile .profile_menu_drodown li:last-of-type a {
+    border: none;
+}
+.wrapper-userprofile .profile_menu_drodown li:hover a {
+    color: #fff;
+}
+.wrapper-userprofile.active {
+    background: #3f6690;
+    box-shadow: none;
+    border-bottom: none;
+    color: #fff;
+	border-radius: 5px 5px 0px 0px;
+}
+.wrapper-userprofile.active:after {
+    border-color: #ddd transparent;
+}
+.wrapper-userprofile.active .profile_menu_drodown {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    max-height: 400px;
+	z-index:1;
+}
+ul.profile_menu_drodown{
+	padding:0px; list-style-type:none;padding:0px;margin:0px;
+}
+ul.profile_menu_drodown li.logout a{
+	background:url(../../assets/images/profile_logout_icon.png) no-repeat 10px center;
+}
+ul.profile_menu_drodown li.logout a:hover{
+	background:url(../../assets/images/profile_logout_icon.png) no-repeat 10px center #3a5d84;
+}

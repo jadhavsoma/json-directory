@@ -1,0 +1,13 @@
+@font-face {
+   font-family: 'Calibri';
+   src: url('../assets/fonts/Calibri.eot');
+   src: url('../assets/fonts/Calibri.eot?#iefix') format('embedded-opentype'),
+   url('../assets/fonts/Calibri.woff') format('woff'),
+   url('../assets/fonts/Calibri.ttf')  format('truetype'),
+   url('../assets/fonts/Calibri.svg#CustomFont') format('svg');
+}
+
+body{margin:0px;padding:0px; font-family:'Calibri', Arial, sans-serif; font-size:14px;}
+img{border:none;}
+a, a:link, a:visited{color:#0d5aa9; text-decoration:none;outline:none;}
+a:hover{text-decoration:underline;}

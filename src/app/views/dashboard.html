@@ -1,0 +1,36 @@
+<p class="mytitle">
+Dashbaord Page
+</p>
+
+<div *ngFor='let user of users' style="text-align:center">
+<h2>{{user.id}} - {{user.name}}</h2>
+<p>{{user.name}}</p>
+<p>{{user.username}}</p>
+<p>{{user.email}}</p>
+
+</div>
+
+<br>
+
+<table>
+<tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Age</td>
+</tr>
+<tr *ngFor="let user of users1">
+    <td>{{user.status}}</td>
+    <td>{{user.compid}}</td>
+    <td>{{user.SSO}}</td>
+</tr>
+
+</table>
+<br><br>
+
+<h2>Post data return</h2>
+<div>
+<span id="Username"></span>
+<span id="UserfullName"></span>
+</div>
+
+
