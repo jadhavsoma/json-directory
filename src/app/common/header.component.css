@@ -1,16 +1,26 @@
-@font-face {
-   font-family: 'Calibri';
-   src: url('../../assets/fonts/Calibri.eot');
-   src: url('../../assets/fonts/Calibri.eot?#iefix') format('embedded-opentype'),
-   url('../../assets/fonts/Calibri.woff') format('woff'),
-   url('../../assets/fonts/Calibri.ttf')  format('truetype'),
-   url('../../assets/fonts/Calibri.svg#CustomFont') format('svg');
+#overlay_login {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #ddd;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
-
-.copyright{margin:0px;padding:0px; font-family:'Calibri', Arial, sans-serif; font-size:14px;border-top: solid 10px #c1ec8f;}
-img{border:none;}
-a, a:link, a:visited{color:#0d5aa9; text-decoration:none;outline:none;}
-a:hover{text-decoration:underline;}
+#loading_login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	padding:10px;
+	background:#000;
+	border-radius:5px;
+    margin: -33px 0 0 -40px;
+	z-index: 99999;
+}
+.btn-group{
+    z-index: 9998;
+}
 .bar-bg {
 	background: #e0fad5;
 	border-bottom: 1px solid #b9e48b;
@@ -19,7 +29,7 @@ a:hover{text-decoration:underline;}
     font-size: 13px;
     font-weight: bold;
     height: 32px;
-	line-height:30px;
+	line-height:25px;
     vertical-align: middle;
     padding-left:5px;
 }
@@ -117,4 +127,11 @@ ul.profile_menu_drodown li.logout a{
 }
 ul.profile_menu_drodown li.logout a:hover{
 	background:url(../../assets/images/profile_logout_icon.png) no-repeat 10px center #3a5d84;
+}
+#companyname{color:#ff0000;}
+#empName{
+    max-width: 105px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Portico</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="assets/js/jquery-latest.js"></script>
+<style type="text/css">
+body{margin:0px;padding:0px; font-family:'Calibri', Arial, sans-serif; font-size:14px;}
+#loading_redirection{
+	background: #88b51e;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.loading_redirection_wrap{
+	background:#fff;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
+	border:1px solid #d7d7d7;
+	width:500px;
+	margin:auto;
+	margin-top:150px;
+	padding:10px;
+	text-align:center;
+	border-radius: 5px;
+}
+
+</style>
+</head>
+
+<body onload="callDirectLogin()">
+<script type="text/javascript">
+
+function getUrlVars() {
+    var vars = [],
+      hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') +
+      1).split('&');
+    for (var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
+
+function callDirectLogin(){
+ var token1 = getUrlVars()["token1"];
+ var token2 = getUrlVars()["token2"];
+	// alert('1-'+token1);
+ 	//alert('2-'+token2);
+    var directLogin = {
+      'accessToken': token1,
+      'srcToken': token2
+    };
+    var XHR = $.ajax({
+      type: 'POST',
+      timeout: 20000,
+      url: 'https://mporticonew.topsource.in/Portico/DocArchLoginController',
+      data: directLogin,
+      dataType: 'Json'
+    }).done(function(data) {
+      //alert(JSON.stringify(data));
+    }).fail(function(jqXHR, text_status, strError) {
+      console.log('something went wrong...');
+    });
+    XHR.done(function(data) {
+      try {
+			//alert('session- '+data.accessToken);
+			localStorage.setItem("userFullName",data.userFullName);
+			localStorage.setItem("selectedCompany",data.compName);
+			localStorage.setItem("access_token",data.accessToken);
+			window.location.href = "index.html";
+	  } catch (e) {}
+    });
+
+
+}
+</script>
+<div id="loading_redirection">
+<div class="loading_redirection_wrap">
+<p style="color:#555;font-size:24px;font-weight:bold;">Please wait while you're redirected</p>
+<p style="color:#555;">Loading...</p>
+<p><img alt="" src="assets/images/portico-loader.gif" style="padding:10px;background:#000;border-radius:5px;opacity:0.8;"></p>
+</div>
+</div>
+</body>
+</html>

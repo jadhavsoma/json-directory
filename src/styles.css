@@ -1,3 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Calibri';
+    src: url('src/assets/fonts/Calibri.eot');
+    src: url('src/assets/fonts/Calibri.eot?#iefix') format('embedded-opentype'),
+    url('src/assets/fonts/Calibri.woff') format('woff'),
+    url('src/assets/fonts/Calibri.ttf')  format('truetype'),
+    url('src/assets/fonts/Calibri.svg#CustomFont') format('svg');
+ }
+ body {
+    color: #333333;
+    font-family: "calibri",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}
+a:link, a:visited {
+    color: #0d5aa9;
+    text-decoration: none;
+}
+a:hover {
+    color: #00629A;
+}
+a:active {
+    color: #0071B3;
+}
+a, a:focus, a:link {
+    outline:none;
+}
+a.more, a.more:visited{
+	color: #0d5aa9;
+	font-weight:bold;
+}
 
-.mytitle{color:#076d0c;}
+strong, em, b, i, h1, h2, h3, h4, h5, h6, address {
+    font-family: "calibri",Arial,Helvetica,sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, ul, footnote {
+    margin-bottom: 2px;
+    margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+h1, h2 {
+    line-height: 1.2;
+}
+h3, h4 {
+    line-height: 1.2;
+}
+h5, h6 {
+    line-height: 1.2;
+}
+p, li {
+    line-height: 1.5;
+}
+
+ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+img{
+	border:none;
+}
+.clr{
+	clear:both;
+	height:0px;
+	margin:0px;
+}
+
+
+
+ .mytitle{color:#076d0c;}

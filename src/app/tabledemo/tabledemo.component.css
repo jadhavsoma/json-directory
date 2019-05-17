@@ -1,0 +1,26 @@
+table tr th, table tr td{
+    font-size:14px !important;
+}
+[_nghost-ahm-c3]{
+    font-size:14px !important;
+}
+
+
+/* headers grid color*/
+/* :host /deep/ ng2-smart-table thead > tr > th  { 
+    border: 1px solid #ddd;
+}   */
+/*font size*/
+:host /deep/ ng2-smart-table {
+    font-size:16px;
+}
+
+:host /deep/ tr,td{
+
+    border: 1px solid #ddd;
+    }
+
+nav.ng2-smart-pagination-nav{
+
+    margin: auto;
+}
